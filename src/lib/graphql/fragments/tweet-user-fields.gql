@@ -1,0 +1,24 @@
+
+
+fragment TweetUserFields on TwitterUserType
+{
+      id
+      name
+      username
+      description
+      profile_image_url
+      location
+      url
+      created_at
+      verified
+      protected
+      public_metrics
+      {
+        followers_count
+        following_count
+        tweet_count
+        listed_count
+        __typename
+      }
+      __typename
+}

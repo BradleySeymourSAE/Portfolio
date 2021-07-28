@@ -1,0 +1,28 @@
+
+
+fragment UserGameFields on UserGameType
+{
+    cover_url
+    created_at
+    downloads_count
+    id
+    min_price
+    p_android
+    p_linux
+    p_osx
+    p_windows
+    published
+    published_at
+    short_text
+    title
+    type
+    url
+    views_count
+    earnings {
+        currency
+        amount_formatted
+        amount 
+        __typename   
+    }
+    __typename
+}

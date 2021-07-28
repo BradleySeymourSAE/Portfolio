@@ -1,5 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+./src/lib/graphql/queries/*
+./src/lib/graphql/mutations/*
+./src/lib/graphql/fragments/*
+./src/routes/*
+./src/config/production
+./src/config/routes
+
+
 # dependencies
 /node_modules
 /.pnp
@@ -13,6 +21,7 @@
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -21,3 +30,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+notes.js

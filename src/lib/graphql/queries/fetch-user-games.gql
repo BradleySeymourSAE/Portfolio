@@ -1,0 +1,10 @@
+#import "../fragments/user-game-fields.gql"
+
+query fetchUserGamesQuery
+{
+    fetchUserGames
+    {
+        ...UserGameFields
+        __typename
+    }
+}

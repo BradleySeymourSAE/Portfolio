@@ -1,0 +1,26 @@
+#import "../fragments/tweet-user-fields.gql"
+#import "../fragments/user-timeline-tweet-fields.gql"
+
+
+query fetchUserTweetsQuery($username: String!)
+{
+    fetchUserTweets(username: $username)
+    {
+        user
+        {
+            ...TweetUserFields
+            timeline
+            {
+                ...UserTimelineTweetFields
+                referenced_tweets
+                {
+                    ...UserTimelineTweetFields
+                    __typename
+                }
+                __typename
+            }
+            __typename
+        }
+        __typename
+    }
+}
