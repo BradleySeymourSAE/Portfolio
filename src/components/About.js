@@ -24,7 +24,7 @@ function About(props){
     return (
       <section id="about">
         <div className="col-md-12">
-          <h1 style={{ color: "black" }}>
+          <h1 style={{ color: "black", fontWeight: "500" }}>
             <span>{sectionName}</span>
           </h1>
           <div className="row center mx-auto mb-5">
@@ -32,7 +32,7 @@ function About(props){
               <div className="polaroid">
                 <span style={{ cursor: "auto" }}>
                   <img
-                    height="250px"
+                    height="225px"
                     src={profilepic}
                     alt="Avatar placeholder"
                   />
@@ -75,15 +75,16 @@ function About(props){
                     ></span>
                   </div>
                   <div
-                    className="card-body font-poppins text-justify ml-3 mr-3"
+                    className="card-body text-justify ml-3 mr-3"
                     style={{
+                      fontFamily: "Poppins",
                       height: "auto",
-                      fontSize: "132%",
+                      fontSize: "150%",
                       lineHeight: "200%",
                     }}
                   >
                     <br />
-                    <span className="wave">{hello} :) </span>
+                    <span className="wave">{hello} there! :) </span>
                     <br />
                     <br />
                     {about}

@@ -43,7 +43,7 @@ class Experience extends Component {
               fontSize: "16px",
               textAlign: "center",
             }}
-            icon={<Icon icon={cSharpIcon} style={{ paddingRight: "3px" }} />}
+            icon={<Icon icon={cSharpIcon} style={{ paddingRight: "1.5px" }} />}
             key={i}
           >
             <div style={{ textAlign: "left", marginBottom: "4px" }}>
@@ -72,7 +72,7 @@ class Experience extends Component {
       <section id="resume" className="pb-5">
         <div className="col-md-12 mx-auto">
           <div className="col-md-12">
-            <h1 className="section-title" style={{ color: "black" }}>
+            <h1 className="section-title" style={{ color: "black", fontWeight: "500" }}>
               <span className="text-black" style={{ textAlign: "center" }}>
                 {sectionName}
               </span>
