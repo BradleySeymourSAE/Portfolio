@@ -18,7 +18,7 @@
           "images/portfolio/alpine/alpine1.png",
           "images/portfolio/alpine/alpine2.png"
         ],
-        "url": "",
+        "url": "https://bradleyseymoursae.itch.io/lucid-alpine-experience",
         "technologies": [
           {
               "class": "devicon-unity-plain",
@@ -38,7 +38,7 @@
           "images/portfolio/field-of-fire/field1.png",
           "images/portfolio/field-of-fire/field2.png"
         ],
-        "url": "https://github.com",
+        "url": "https://bradleyseymoursae.itch.io/field-of-fire",
         "technologies": [
             {
                 "class": "devicon-unity-plain",
@@ -58,7 +58,7 @@
           "images/portfolio/prison/prison1.png",
           "images/portfolio/prison/prison2.png"
         ],
-        "url": "https://github.com",
+        "url": "https://bradleyseymoursae.itch.io/prison-break",
         "technologies": [
             {
                 "class": "devicon-unity-plain",
