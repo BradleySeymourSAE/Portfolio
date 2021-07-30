@@ -2,7 +2,7 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "bradleyseemore.dev",
+  "homepage": "https://bradleyseemore.dev",
   "dependencies": {
     "@apollo/react-components": "^4.0.0",
     "@apollo/react-hooks": "^4.0.0",
