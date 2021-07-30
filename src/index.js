@@ -17,10 +17,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
  window.$secondaryLanguage = 'en';
  window.$secondaryLanguageIconId = 'secondary-lang-icon';
- 
-
-console.log(`Window: `, window);
-
 
 ReactDOM.render(
   <Providers apollo theme>

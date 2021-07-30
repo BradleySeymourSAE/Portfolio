@@ -42,6 +42,7 @@
   "scripts": {
     "start": "npm run build && react-scripts start",
     "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "nodemon react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
