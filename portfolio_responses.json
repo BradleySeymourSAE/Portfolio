@@ -1,0 +1,114 @@
+{
+    "basic_info": {
+      "description_header": "Hi",
+      "description": "👋 My name is Bradley, I am a game developer from the gold coast currently studying a bachelors associate in game development. My passion lies with both programming and level design!",
+      "section_name": {
+        "about": "About me",
+        "projects": "Featured Projects",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "Lucid Alpine Experience",
+        "startDate": "2021",
+        "description": "A lucid dream inspired game created from a personal perspective.",
+        "images": [
+          "images/portfolio/alpine/alpine1.png",
+          "images/portfolio/alpine/alpine2.png"
+        ],
+        "url": "",
+        "technologies": [
+          {
+              "class": "devicon-unity-plain",
+              "name": "Unity"
+          },
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          }
+        ]
+      },
+      {
+        "title": "Field of Fire",
+        "startDate": "2021",
+        "description": "The Field of Fire (Tanky Tanks) project that I had created during my first trimester at SAE Institute. Project was heavily inspired by Sebastian Lague and VGHS. ",
+        "images": [
+          "images/portfolio/field-of-fire/field1.png",
+          "images/portfolio/field-of-fire/field2.png"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+            {
+                "class": "devicon-unity-plain",
+                "name": "Unity"
+            },
+            {
+              "class": "devicon-csharp-plain",
+              "name": "C#"
+            }
+        ]
+      },
+      {
+        "title": "Prison Break",
+        "startDate": "2021",
+        "description": "Shippable Assets Project that I created while studying at SAE Institute. I developed the assets and the logic for the application and I enjoyed working with lighting, post processing and shaders in this!",
+        "images": [
+          "images/portfolio/prison/prison1.png",
+          "images/portfolio/prison/prison2.png"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+            {
+                "class": "devicon-unity-plain",
+                "name": "Unity"
+            },
+            {
+              "class": "devicon-csharp-plain",
+              "name": "C#"
+            }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Lead Programmer (Code Maintainer)",
+        "title": "Studying a Bachelors Associate in Games Development",
+        "years": "01/03/2021 - present",
+        "mainTech": [
+          "Unity",
+          "C#"
+        ],
+        "technologies": [
+          "GraphQL",
+          "C#",
+          "Blender",
+          "Davinci Resolve",
+          "Figma",
+          ".NET",
+          ".NET Core",
+          "Git"
+        ]
+      },
+      {
+        "company": "Self Taught",
+        "title": "Javascript & Node JS Developer",
+        "years": "12.2019 - present",
+        "mainTech": [
+          "Javascript",
+          "Node JS",
+          "Lua"
+        ],
+        "technologies": [
+          "GraphQL",
+          "Node JS",
+          "Javascript",
+          "Recompose",
+          "Redux",
+          "Git Bash",
+          "Apollo"
+        ]
+      }
+    ]
+  }

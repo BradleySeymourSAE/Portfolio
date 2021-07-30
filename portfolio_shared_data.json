@@ -1,0 +1,63 @@
+{
+    "basic_info": {
+      "name": "Bradley Seymour",
+      "titles": [ "Game Developer", "Code Maintainer" ],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com",
+          "class": "fab fa-github"
+        },
+        {
+          "name": "twitter",
+          "url": "https://www.twitter.com",
+          "class": "fab fa-twitter"
+        }
+      ],
+      "image": "portfolio.jpg"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "HTML 5",
+          "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+          "name": "CSS 3",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
+          "name": "JavaScript",
+          "class": "devicon-javascript-plain",
+          "level": "80"
+        },
+        {
+          "name": "C#",
+          "class": "devicon-csharp-plain",
+          "level": "90"
+        },
+        {
+            "name": "GraphQL",
+            "class": "devicon-graphql-plain",
+            "level": "70"
+        },
+        { 
+            "name": "Lua",
+            "class": "devicon-lua-plain",
+            "level": "75"
+        },
+        { 
+            "name": "Git",
+            "class": "devicon-git-plain",
+            "level": "85"
+        },
+        {
+            "name": "Node JS",
+            "class": "devicon-nodejs-plain",
+            "level": "65"
+        }
+      ]
+    }
+  }
