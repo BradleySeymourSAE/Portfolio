@@ -5,13 +5,18 @@
       "social": [
         {
           "name": "github",
-          "url": "https://github.com",
+          "url": "https://github.com/BradleySeymourSAE",
           "class": "fab fa-github"
         },
         {
           "name": "twitter",
-          "url": "https://www.twitter.com",
+          "url": "https://twitter.com/seemore_gamedev",
           "class": "fab fa-twitter"
+        },
+        {
+          "name": "itch.io",
+          "url": "https://bradleyseymoursae.itch.io",
+          "class": "fab fa-itchio"
         }
       ],
       "image": "portfolio.jpg"
