@@ -2,7 +2,7 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://BradleySeymourSAE.github.io/Portfolio",
   "dependencies": {
     "@apollo/react-components": "^4.0.0",
     "@apollo/react-hooks": "^4.0.0",
@@ -42,6 +42,7 @@
   "scripts": {
     "start": "npm run build && react-scripts start",
     "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "nodemon react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
