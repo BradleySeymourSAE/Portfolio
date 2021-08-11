@@ -5,7 +5,9 @@ import './App.scss';
 import Homepage from 'Homepage';
 import Providers from 'providers';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'base.css';
+import 'sass/materialize.scss';
 
 
 /**

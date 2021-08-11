@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import unityIcon from "@iconify/icons-logos/unity";
 import blenderIcon from '@iconify/icons-logos/blender';
 import cSharpIcon from '@iconify/icons-logos/c-sharp';
+import * as Styled from './styled';
 
 
 function About(props){
@@ -12,89 +13,69 @@ function About(props){
     resumeBasicInfo
   } = props;
 
-    if (sharedBasicInfo) {
+    if (sharedBasicInfo) 
+    {
       var profilepic = "images/" + sharedBasicInfo.image;
     }
-    if (resumeBasicInfo) {
+
+    if (resumeBasicInfo) 
+    {
       var sectionName = resumeBasicInfo.section_name.about;
-      var hello = resumeBasicInfo.description_header;
       var about = resumeBasicInfo.description;
     }
 
     return (
-      <section id="about">
-        <div className="col-md-12">
-          <h1 style={{ color: "black", fontWeight: "500" }}>
-            <span>{sectionName}</span>
-          </h1>
-          <div className="row center mx-auto mb-5">
-            <div className="col-md-4 mb-5 center">
-              <div className="polaroid">
-                <span style={{ cursor: "auto" }}>
-                  <img
-                    height="225px"
-                    src={profilepic}
-                    alt="Avatar placeholder"
-                  />
-                  <Icon
-                    icon={unityIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
-                  <Icon
-                    icon={blenderIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
-                  <Icon
-                    icon={cSharpIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
-                </span>
-              </div>
-            </div>
+      <Styled.SectionLayout id="about">
+        <div className="col s12">
+          <Styled.SectionTitle 
+              className="center" color={({ theme }) => `${theme.colors.greyDarken4}`} 
+              weight={`${({ theme }) => theme.fonts.weights.bolder}`}
+            >
+            <span>
+              {sectionName}
+            </span>
+          </Styled.SectionTitle>
 
-            <div className="col-md-8 center">
-              <div className="col-md-10">
-                <div className="card">
-                  <div className="card-header">
-                    <span
-                      className="iconify"
-                      data-icon="emojione:red-circle"
-                      data-inline="false"
-                    ></span>{" "}
-                    &nbsp;{" "}
-                    <span
-                      className="iconify"
-                      data-icon="twemoji:yellow-circle"
-                      data-inline="false"
-                    ></span>{" "}
-                    &nbsp;{" "}
-                    <span
-                      className="iconify"
-                      data-icon="twemoji:green-circle"
-                      data-inline="false"
-                    ></span>
-                  </div>
-                  <div
-                    className="card-body text-justify ml-3 mr-3"
-                    style={{
-                      fontFamily: "Poppins",
-                      height: "auto",
-                      fontSize: "150%",
-                      lineHeight: "200%",
-                    }}
-                  >
-                    <br />
-                    <span className="wave">{hello} there! :) </span>
-                    <br />
-                    <br />
-                    {about}
+            <div className="col s12">
+              <div className="row center">
+
+                {/* <!-- Avatar Image Placeholder --> */}
+                <div className="col m6 pull-m1 center">
+                  <div className="col m6 center">
+                    <img
+                      className="responsive-img"
+                      height="150px"
+                      src={profilepic}
+                      alt="Avatar placeholder"
+                    />
                   </div>
                 </div>
+
+                {/* <!-- Card Text Box  --> */}
+                <div className="col m6 pull-m1 center">
+                  <div className="col s12">
+                    <div className="card col s12" style={{ marginTop: "1rem", paddingTop: '10px' }}>
+              
+                    <Styled.SectionContent
+                      className="card-content valign-wrapper"
+                      style={{
+                        fontFamily: "Poppins",
+                        height: "auto",
+                        fontSize: "1em",
+                        lineHeight: "150%",
+                        padding: "1rem 1.48rem"
+                      }}
+                     >
+                      {about}
+                    </Styled.SectionContent>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
         </div>
-      </section>
+      </Styled.SectionLayout>
     );
 }
 

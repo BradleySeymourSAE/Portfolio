@@ -9,6 +9,7 @@ import config from 'config';
 
 const httpLink = createHttpLink({
   uri: `${config.apiHost}/graphql`,
+  credentials: 'same-origin'
 });
 
 const cleanTypename = new ApolloLink((operation, forward) => {

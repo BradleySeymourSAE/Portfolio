@@ -1,64 +1,62 @@
-import React, { Component } from "react";
+import React from "react";
 import Typical from "react-typical";
-import Switch from "react-switch";
+import styled from 'styled-components/macro';
+import * as Styled from './styled';
 
 
+const DeveloperName = styled.h1
+`
+  font-family: 'Poppins';
+  font-size: 3em;
+  font-weight: 900;
+  color: ${({ theme }) => theme.colors.greyDarken5};
+`;
 
-class Header extends Component {
-  titles = [];
+const DeveloperRoleContainer = styled.div`
+  height: 75px;
+`;
 
-  constructor() {
-    super();
-    this.state = { checked: false };
-    this.onThemeSwitchChange = this.onThemeSwitchChange.bind(this);
+const DeveloperRoles = styled(Typical)
+`
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 2em;
+    color: ${({ theme }) => theme.colors.greyDarken3};
+`;
+
+function Header(props)
+{
+  let titles;
+
+  const { sharedData } = props;
+  if (sharedData)
+  {
+    var name = sharedData.name;
+    titles = sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
   }
 
-  onThemeSwitchChange(checked) {
-    this.setState({ checked });
-    this.setTheme();
-  }
+  const HeaderTitleTypeAnimation = React.memo( () => {
+    return <DeveloperRoles className="title-styles" steps={titles} loop={50} />
+  }, (props, prevProp) => true);
 
-  setTheme() {
-    var dataThemeAttribute = "data-theme";
-    var body = document.body;
-    var newTheme =
-      body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
-    body.setAttribute(dataThemeAttribute, newTheme);
-  }
-
-  render() {
-    if (this.props.sharedData) {
-      var name = this.props.sharedData.name;
-      this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
-    }
-
-    const HeaderTitleTypeAnimation = React.memo( () => {
-      return <Typical className="title-styles" steps={this.titles} loop={50} />
-    }, (props, prevProp) => true);
-
-    return (
-      <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
-        <div className="row aligner" style={{height: '100%'}}>
-          <div className="col-md-12">
-            <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
-              <br/>
-              <h1 className="mb-0">
-                <Typical steps={[name]} wrapper="p" />
-              </h1>
-              <div className="title-container">
-                <HeaderTitleTypeAnimation />
-              </div>
-              {/*
-                  This is where the switch had been, can move back if you want to but ehh 
-                
-              */}
-            </div>
+  return (
+    <Styled.SectionHeader id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
+      <div style={{height: '100%'}}>
+        <div className="col s12">
+          <div>
+            <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
+            <br/>
+            <DeveloperName>
+              <Typical steps={[name]} wrapper="p" />
+            </DeveloperName>
+            <DeveloperRoleContainer className="title-container">
+              <HeaderTitleTypeAnimation />
+            </DeveloperRoleContainer>
           </div>
         </div>
-      </header>
-    );
-  }
+      </div>
+    </Styled.SectionHeader>
+  );
 }
 
 export default Header;

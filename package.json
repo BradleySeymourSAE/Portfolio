@@ -5,6 +5,7 @@
   "homepage": "https://bradleyseemore.dev",
   "dependencies": {
     "@apollo/react-components": "^4.0.0",
+    "@apollo/react-hoc": "^4.0.0",
     "@apollo/react-hooks": "^4.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -40,6 +41,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "once": "react-scripts start",
     "start": "npm run build && react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

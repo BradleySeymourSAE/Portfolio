@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "description_header": "Hi",
-      "description": "👋 My name is Bradley, I am a game developer from the gold coast currently studying a bachelors associate in game development. My passion lies with both programming and level design!",
+      "description": "My name is Bradley and I am a task-oriented developer who is skilled in developing databases, designing user interfaces, writing, testing, and troubleshooting code, as well as implementing features and responding to user feedback. I'm from the Gold Coast in Australia and am presently pursuing a Bachelor's degree in game development!",
       "section_name": {
         "about": "About me",
         "projects": "Featured Projects",
@@ -21,8 +21,8 @@
         "url": "https://bradleyseymoursae.itch.io/lucid-alpine-experience",
         "technologies": [
           {
-              "class": "devicon-unity-plain",
-              "name": "Unity"
+            "class": "devicon-unity-plain",
+            "name": "Unity"
           },
           {
             "class": "devicon-csharp-plain",
@@ -41,8 +41,8 @@
         "url": "https://bradleyseymoursae.itch.io/field-of-fire",
         "technologies": [
             {
-                "class": "devicon-unity-plain",
-                "name": "Unity"
+              "class": "devicon-unity-plain",
+              "name": "Unity"
             },
             {
               "class": "devicon-csharp-plain",
@@ -61,8 +61,8 @@
         "url": "https://bradleyseymoursae.itch.io/prison-break",
         "technologies": [
             {
-                "class": "devicon-unity-plain",
-                "name": "Unity"
+              "class": "devicon-unity-plain",
+              "name": "Unity"
             },
             {
               "class": "devicon-csharp-plain",
@@ -92,7 +92,7 @@
         ]
       },
       {
-        "company": "Self Taught",
+        "company": "Self-trained",
         "title": "Javascript & Node JS Developer",
         "years": "12.2019 - present",
         "mainTech": [
@@ -107,7 +107,8 @@
           "Recompose",
           "Redux",
           "Git Bash",
-          "Apollo"
+          "React",
+          "React Apollo"
         ]
       }
     ]

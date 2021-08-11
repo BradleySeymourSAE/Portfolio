@@ -2,7 +2,7 @@
 
 query fetchUserGamesQuery
 {
-    fetchUserGames
+    userGames
     {
         ...UserGameFields
         __typename
