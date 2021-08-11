@@ -1,20 +1,35 @@
 {
     "basic_info": {
       "name": "Bradley Seymour",
-      "titles": [ "Game Developer", "Code Maintainer" ],
+      "titles": [ "Indie Game Developer", "Lead Programmer", "Code Maintainer" ],
       "social": [
         {
           "name": "github",
-          "url": "https://github.com",
+          "url": "https://github.com/bradleyseymoursae",
           "class": "fab fa-github"
         },
         {
+          "name": "gitlab",
+          "url": "https://gitlab.com/bradleyseymoursae",
+          "class": "fab fa-gitlab"
+        },
+        {
+          "name": "linked-in",
+          "url": "linkedin.com/in/seemore-gamedev",
+          "class": "fab fa-linkedin"
+        },
+        {
           "name": "twitter",
-          "url": "https://www.twitter.com",
+          "url": "https://twitter.com/seemore_gamedev",
           "class": "fab fa-twitter"
+        },
+        {
+          "name": "itch.io",
+          "url": "https://bradleyseymoursae.itch.io",
+          "class": "fab fa-itch-io"
         }
       ],
-      "image": "portfolio.jpg"
+      "image": "portfolio.png"
     },
     "skills": {
       "icons": [

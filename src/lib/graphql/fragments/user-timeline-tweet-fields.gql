@@ -45,4 +45,15 @@ fragment UserTimelineTweetFields on TweetType
             }
             __typename
             conversation_id
+            includes
+            {
+                media
+                {
+                    width
+                    height
+                    media_key
+                    url
+                    type
+                }
+            }
 }

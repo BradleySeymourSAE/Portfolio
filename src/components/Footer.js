@@ -1,38 +1,80 @@
-import React, { Component } from "react";
+import React from "react";
+import * as Styled from './styled';
+import styled from 'styled-components/macro';
 
-class Footer extends Component {
-  render() {
-    if (this.props.sharedBasicInfo) {
-      var networks = this.props.sharedBasicInfo.social.map(function (network) {
-        return (
-          <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <i className={network.class}></i>
-            </a>
-          </span>
-        );
-      });
+const SocialLinks = styled.div
+`
+margin-top: 25px;
+
+    div > a
+    {
+      margin: 5px;
     }
+`;
 
-    return (
-      <footer>
-        <div className="col-md-12">
-          <div className="social-links">{networks}</div>
+const SocialCallToActionContainer = styled.div
+`
 
-          <div className="copyright py-4 text-center">
-            <div className="container">
-              <small>
-                Copyright &copy;{" "}
-                {this.props.sharedBasicInfo
-                  ? this.props.sharedBasicInfo.name
-                  : "???"}
-              </small>
-            </div>
-          </div>
-        </div>
-      </footer>
-    );
+`;
+
+const SocialCallToAction = styled.a
+`
+
+`;
+
+const SocialIcon = styled.i
+`
+
+`;
+
+const CopyrightContainer = styled.div
+``;
+
+
+const Copyright = styled.div
+`
+
+`;
+
+
+
+function Footer(props)
+{
+  const { sharedBasicInfo } = props;
+
+  if (sharedBasicInfo)
+  {
+    var networks = sharedBasicInfo.social.map((network) => {
+      return (
+        <SocialCallToActionContainer key={network.name} className="margin-small">
+          <SocialCallToAction href={network.url} target="_blank" rel="noopener noreferrer">
+            <SocialIcon className={network.class}></SocialIcon>
+          </SocialCallToAction>
+        </SocialCallToActionContainer>
+      );
+    });
   }
+
+  return (
+    <Styled.SectionFooter>
+      <div className="row">
+        <SocialLinks className="social-links center">
+          {networks}
+        </SocialLinks>
+
+        <CopyrightContainer className="copyright center col s12">
+          <Copyright>
+            <small>
+              Copyright &copy;{" "}
+              {sharedBasicInfo
+                ? sharedBasicInfo.name
+                : "???"}
+            </small>
+          </Copyright>
+        </CopyrightContainer>
+      </div>
+    </Styled.SectionFooter>
+  );
 }
 
 export default Footer;

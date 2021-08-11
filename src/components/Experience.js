@@ -1,36 +1,88 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Badge from "react-bootstrap/Badge";
 import { Icon } from '@iconify/react';
-import unityIcon from '@iconify/icons-logos/unity';
 import cSharpIcon from '@iconify/icons-logos/c-sharp';
 import javascriptIcon from '@iconify/icons-logos/javascript';
+import styled from 'styled-components/macro';
+import * as Styled from './styled';
 
 
-class Experience extends Component {
-  render() {
-    if (this.props.resumeExperience && this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.experience;
-      var work = this.props.resumeExperience.map(function (work, i) {
+
+const WorkTitle = styled.div`
+  text-align: left;
+  font-size: 1.15em;
+  font-weight: ${({ theme }) => theme.fonts.weights.bolder};
+  color: ${({ theme }) => theme.colors.greyDarken4};
+  margin-bottom: 3px;
+`;
+
+const CompanyTitle = styled.div`
+  text-align: left;
+  font-size: 1em;
+  font-weight: ${({ theme }) => theme.fonts.weights.normal};
+  color: ${({ theme }) => theme.colors.greyDarken3};
+  font-family: ${({ theme }) => theme.fonts.poppins};
+  margin-bottom: 10px;
+`;
+
+const TechnologyBadgeContainer = styled.div`
+    margin-bottom: 8px;
+`;
+
+const TechnologyBadge = styled.span`
+    background-color: ${(props) => props.bg};
+    color: ${(props) => props.color};
+    font-weight: ${(props) => props.weight};
+    font-family: ${(props) => props.font};
+    margin: 3px;
+`;
+
+
+function Experience(props) 
+{
+  const { 
+    resumeExperience, 
+    resumeBasicInfo 
+  } = props;
+
+  if (resumeExperience && resumeBasicInfo)
+  {
+      var sectionName = resumeBasicInfo.section_name.experience;
+
+      var work = resumeExperience.map(function (work, i) 
+      {
         const technologies = work.technologies;
         const mainTechnologies = work.mainTech;
 
-        var mainTech = mainTechnologies.map((technology, i) => {
+        var l_MainTechnologyBadges = mainTechnologies.map((technology, i) => {
           return (
-            <Badge pill style={{ margin:'2px' }} className="main-badge mr-2 mb-2" key={i}>
+            <TechnologyBadge 
+              bg={({ theme }) => `${theme.colors.blueLighten4}`}
+              color={({ theme }) => `${theme.colors.greyDarken4}`}
+              font={({ theme }) => `${theme.fonts.poppins}`}
+              weight={({ theme }) => `${theme.fonts.bold}`}
+              className="main-badge col"
+              key={i}>
               {technology}
-            </Badge>
+            </TechnologyBadge>
           );
         });
-        var tech = technologies.map((technology, i) => {
+        var l_TechnologyBadges = technologies.map((technology, i) => {
           return (
-            <Badge pill style={{ margin: '2px' }} className="experience-badge mr-2 mb-2" key={i}>
+            <TechnologyBadge 
+                bg={({ theme }) => `${theme.colors.blueLighten4}`}
+                color={({ theme }) => `${theme.colors.greyDarken4}`}
+                font={({ theme }) => `${theme.fonts.poppins}`}
+                weight={({ theme }) => `${theme.fonts.bold}`}
+                className="experience-badge col" 
+                key={i}
+              >
               {technology}
-            </Badge>
+            </TechnologyBadge>
           );
         });
         return (
@@ -38,55 +90,57 @@ class Experience extends Component {
             className="vertical-timeline-element--work"
             date={work.years}
             iconStyle={{
-              background: "#AE944F",
+              background: "#1F1F1F",
               color: "#fff",
               fontSize: "16px",
               textAlign: "center",
             }}
-            icon={<Icon icon={cSharpIcon} style={{ paddingRight: "3px" }} />}
+            icon={<Icon icon={cSharpIcon} style={{ paddingRight: "1.5px" }} />}
             key={i}
           >
-            <div style={{ textAlign: "left", marginBottom: "4px" }}>
-              {mainTech}
-            </div>
+            <TechnologyBadgeContainer className="row">
+              {l_MainTechnologyBadges}
+            </TechnologyBadgeContainer>
 
-            <h3
+            <WorkTitle
               className="vertical-timeline-element-title"
               style={{ textAlign: "left" }}
             >
               {work.title}
-            </h3>
-            <h4
+            </WorkTitle>
+            <CompanyTitle
               className="vertical-timeline-element-subtitle"
               style={{ textAlign: "left" }}
             >
               {work.company}
-            </h4>
-            <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
+            </CompanyTitle>
+            <TechnologyBadgeContainer className="row">
+              {l_TechnologyBadges}
+            </TechnologyBadgeContainer>
           </VerticalTimelineElement>
         );
       });
     }
 
     return (
-      <section id="resume" className="pb-5">
-        <div className="col-md-12 mx-auto">
-          <div className="col-md-12">
-            <h1 className="section-title" style={{ color: "black" }}>
+      <Styled.SectionLayout id="resume" bg={({ theme }) => `${theme.colors.darkAccent}`}>
+        <div className="col s12">
+          <div className="col s12">
+            <Styled.SectionTitle className="center">
               <span className="text-black" style={{ textAlign: "center" }}>
                 {sectionName}
               </span>
-            </h1>
+            </Styled.SectionTitle>
           </div>
         </div>
-        <div className="col-md-8 mx-auto">
+        <div className="col s12 m8" style={{ marginBottom: "30px" }}>
           <VerticalTimeline>
             {work}
             <VerticalTimelineElement
               iconStyle={{
-                background: "#AE944F",
+                background: "#1F1F1F",
                 color: "#fff",
-                textAlign: "center",
+                textAlign: "center"
               }}
               icon={
                 <Icon icon={javascriptIcon} style={{ paddingRight: "3px" }} />
@@ -94,9 +148,8 @@ class Experience extends Component {
             />
           </VerticalTimeline>
         </div>
-      </section>
+      </Styled.SectionLayout>
     );
-  }
 }
 
 export default Experience;

@@ -3,10 +3,18 @@ import Header from 'components/Header';
 import About from 'components/About';
 import Experience from 'components/Experience';
 import Footer from 'components/Footer';
-import Projects from 'components/Projects';
+import Projects from 'components/projects';
 import Skills from 'components/Skills';
+import Twitter from 'components/twitter';
 import $ from 'jquery';
 import "./App.scss";
+import styled from 'styled-components/macro';
+
+
+const HomepageLayout = styled.div
+`
+  background-color: ${(p) => p.color};
+`;
 
 
 class Homepage extends Component {
@@ -57,26 +65,33 @@ class Homepage extends Component {
 
   render() {
     return (
-      <div>
+      <HomepageLayout
+        color={({ theme }) => `${theme.colors.lightContrast}`}
+      >
         <Header sharedData={this.state.sharedData.basic_info} />
         <About
+          className="container"
           resumeBasicInfo={this.state.resumeData.basic_info}
           sharedBasicInfo={this.state.sharedData.basic_info}
         />
         <Projects
+          className="container"
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <Skills
+          className="container"
           sharedSkills={this.state.sharedData.skills}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
+        <Twitter className="center"/>
         <Experience
+          className="container"
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
-      </div>
+      </HomepageLayout>
     );
   }
 }

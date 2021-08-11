@@ -25,6 +25,9 @@ export default {
     alphaWhite90: 'rgba(255, 255, 255, .9)',
     alphaPurple90: 'rgba(198, 83, 255, .9)',
     black: '#000000',
+    darken: "#353239",
+    lighten: "#FAFAFA",
+    accent: "#97CAFF",
     white: '#FFFFFF',
     messages: {
       notice: '#FFAB00',
@@ -40,14 +43,17 @@ export default {
     headerHeight: '55px'
   },
   fonts: {
-    // body: '"Poppins", "Quicksand", sans-serif',
+    body: '"Poppins", "Quicksand", sans-serif',
     header: `'Montserrat', sans-serif`,
+    light: 450,
+    bold: 900,
     family: {
       poppins: `'Poppins', 'Quicksand', sans-serif`,
       montserrat: `Montserrat', sans-serif`,
       helvetica: `'Helvetica', sans-serif`,
       quicksand: `'Quicksand', 'Montserrat', sans-serif`,
     },
+     poppins: `'Poppins', 'Quicksand', sans-serif`,
     weights: {
       light: 300,
       normal: 400,

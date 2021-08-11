@@ -1,12 +1,28 @@
 @import '../src/scss/themes/theme-dark.scss';
 @import '../src/scss/themes/theme-light.scss';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;&display=swap');
 
 html {
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
+}
+
+*:focus {
+    outline: none;
+	box-shadow: none;
+}
+
+*:focus-visible
+{
+	outline: none;
+	box-shadow: none;
+}
+
+textarea:focus, input:focus
+{
+	outline: none;
+	box-shadow: none;
 }
 
 .aligner {
@@ -38,7 +54,7 @@ header {
 	-webkit-background-size: cover;
 	text-align: center;
 	overflow: hidden;
-	background-color: #e9d5a1;
+	background-color: #FEB4B3;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -107,19 +123,6 @@ header h1 {
 	display: none;
 }
 
-#about {
-	background: #fff;
-	overflow: hidden;
-}
-
-#about h1 {
-	padding-top: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color: black;
-	text-align: center;
-}
 
 .foto img {
 	display: block;
@@ -206,7 +209,7 @@ header h1 {
 
 #preview {
 	width: 500px;
-	background-color: #ebeaf5;
+	background-color: #dadada;
 	padding: 15px;
 	position: relative;
 	margin-bottom: 15%;
@@ -216,10 +219,6 @@ header h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-#resume {
-	background: #efe1bd;
 }
 
 .experience-icon {
@@ -233,7 +232,7 @@ header h1 {
 	text-align: left !important;
 	padding: 5px 8px 5px 8px !important;
 	vertical-align: baseline;
-	background-color: #AE944F !important;
+	background-color: #f7efda;
 	color: white;
 	font-weight: lighter !important;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -244,7 +243,7 @@ header h1 {
 	text-align: left !important;
 	padding: 5px 8px 5px 8px !important;
 	vertical-align: baseline;
-	background-color: #f9f5e9 !important;
+	background-color: #f9f5e9;
 	color: black;
 	font-weight: lighter !important;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -341,8 +340,14 @@ header h1 {
 }
 
 #portfolio {
-	background: #efe1bd;
 	padding-bottom: 5%;
+	padding-top: 5%;
+}
+
+#about
+{
+	padding-bottom: 5%;
+	padding-top: 5%;
 }
 
 .portfolio-item {
@@ -377,7 +382,6 @@ header h1 {
 }
 
 #skills {
-	background: #1F1F1F;
 	min-height: 200px;
 	width: 100%;
 	overflow: hidden;
@@ -386,8 +390,10 @@ header h1 {
 
 .section-title {
 	padding-top: 5%;
-	padding-bottom: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
+	padding-bottom: 3%;
+	font: 'Poppins', sans-serif;
+	font-size: 1.3em;
+	font-weight: 750;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color: #fff;
@@ -420,6 +426,8 @@ footer a:visited {
 footer a:hover,
 footer a:focus {
 	color: #fff;
+	outline: none;
+	cursor: grab;
 }
 
 .social-links {
