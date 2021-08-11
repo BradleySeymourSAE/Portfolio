@@ -132,9 +132,7 @@ const StyleSheet = createGlobalStyle`
       position: relative;
       z-index: 1;
 
-    #application-backdrop {
-      display: inline;
-    }
+
 `;
 
 export { StyleSheet };

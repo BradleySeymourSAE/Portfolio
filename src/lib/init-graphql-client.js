@@ -6,11 +6,10 @@ import { setContext } from 'apollo-link-context';
 import Authentication from 'lib/authentication';
 import config from 'config';
 
-console.log(`API RUNNING ON -> ${config.apiHost}/graphql`);
-
 
 const httpLink = createHttpLink({
   uri: `${config.apiHost}/graphql`,
+  credentials: 'same-origin'
 });
 
 const cleanTypename = new ApolloLink((operation, forward) => {
