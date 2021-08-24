@@ -64,26 +64,34 @@ function Projects(props) {
                 }
                 return project;
             });
+
+            if (!game.startDate)
+              game["startDate"] = 2021;
+
             return game;
         });
          
-      var projects = props.userGames.map(function (projects) 
+      var projects = props.userGames.map(function (projects, index) 
       {
+
+        if (!projects.title || !projects.cover_url)
+          return;
+
         return (
-          <StyledProject
-            className="col s12 m4"
+          <div
+            className="col-sm-12 col-md-6 col-lg-4"
             key={projects.title}
-            style={{ cursor: "grab" }}
+            style={{ cursor: "pointer" }}
           >
             <span className="portfolio-item d-block">
               <div className="foto" onClick={() => detailsModalShow(projects)}>
                 <div>
                   <img
-                    src={projects.cover_url}
-                    alt="projectImages"
-                    height="230"
-                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
-                  />
+                        src={projects.cover_url}
+                        alt=""
+                        height="230"
+                        style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
+                    />
                   <StyledProjectDate className="project-date">
                     {projects.startDate}
                   </StyledProjectDate>
@@ -94,25 +102,25 @@ function Projects(props) {
                 </div>
               </div>
             </span>
-          </StyledProject>
+          </div>
         );
       });
     }
 
     return (
-      <Styled.SectionLayout id="portfolio">
-        <div className="col s12">
-          <Styled.SectionTitle className="center">
+      <Styled.SectionLayout id="featured-projects">
+        <div className="col-md-12">
+          <Styled.SectionTitle className="section-title">
             <span>{sectionName}</span>
           </Styled.SectionTitle>
-          <div className="col s12">
-            <div className="row">
+          <div className="col-md-12 mx-auto">
+            <div className="row mx-auto">
               {projects}
-              </div>
+            </div>
           </div>
           <ProjectDetailsModal
             show={state.detailsModalShow}
-            onHide={() => detailsModalHide()}
+            onHide={detailsModalHide}
             data={state.deps}
           />
         </div>

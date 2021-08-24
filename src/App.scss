@@ -2,7 +2,7 @@
 @import '../src/scss/themes/theme-light.scss';
 
 html {
-	font-size: 62.5%;
+	font-size: 75%;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
@@ -235,7 +235,7 @@ header h1 {
 	background-color: #f7efda;
 	color: white;
 	font-weight: lighter !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .experience-badge {
@@ -246,7 +246,7 @@ header h1 {
 	background-color: #f9f5e9;
 	color: black;
 	font-weight: lighter !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .vertical-timeline-element-date {
@@ -339,15 +339,13 @@ header h1 {
 	color: black !important;
 }
 
-#portfolio {
+#featured-projects {
 	padding-bottom: 5%;
-	padding-top: 5%;
 }
 
 #about
 {
 	padding-bottom: 5%;
-	padding-top: 5%;
 }
 
 .portfolio-item {
