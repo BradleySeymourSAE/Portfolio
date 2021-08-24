@@ -21,9 +21,23 @@ const SectionTitle = styled.h2
   font-size: 2.4rem;
   margin-bottom: 30px;
 `;
+/*
+ style={{
+                        fontFamily: "Poppins",
+                        height: "auto",
+                        fontSize: "1.6em",
+                        lineHeight: "200%",
+                        padding: "2rem"
+                      }}
 
+*/
 const SectionContent = styled.div
 `
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    font-size: 1.35em;
+    line-height: 200%;
+    padding: 2rem;
 `;
 
 const SectionFooter = styled.footer

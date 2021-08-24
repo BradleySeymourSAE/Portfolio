@@ -6,6 +6,7 @@ import Footer from 'components/Footer';
 import Projects from 'components/projects';
 import Skills from 'components/Skills';
 import Twitter from 'components/twitter';
+import Navigation from 'Navigation';
 import $ from 'jquery';
 import "./App.scss";
 import styled from 'styled-components/macro';
@@ -65,30 +66,33 @@ class Homepage extends Component {
 
   render() {
     return (
-      <HomepageLayout bg={({ theme }) => `${theme.colors.accent}`}>
+      <HomepageLayout bg={({ theme }) => `${theme.colors.accent}`} id="wrapper" className="toggled">
+        <Navigation />
+        <div className="page-content-wrapper">
         <Header sharedData={this.state.sharedData.basic_info} />
         <About
-          className="container"
+          className="container-fluid"
           resumeBasicInfo={this.state.resumeData.basic_info}
           sharedBasicInfo={this.state.sharedData.basic_info}
         />
         <Projects
-          className="container"
+          className="container-fluid"
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <Skills
-          className="container"
+          className="container-fluid"
           sharedSkills={this.state.sharedData.skills}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
-        <Twitter className="center"/>
+        <Twitter className="container-fluid"/>
         <Experience
-          className="container"
+          className="container-fluid"
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
+        </div>
       </HomepageLayout>
     );
   }
