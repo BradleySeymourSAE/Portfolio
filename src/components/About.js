@@ -52,7 +52,7 @@ function About(props){
 
                 {/* <!-- Card Text Box  --> */}
                 <div className="col-md-12">
-                    <div className="card card-responsive">
+                    <div className="card card-responsive dark-accent">
                     <Styled.SectionContent
                       className="card-body text-start ml-6 mr-3"
                      >

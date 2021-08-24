@@ -6,12 +6,12 @@ import styled from 'styled-components/macro';
 
 const TweetViewContainer = styled.div
 `
+    font-family: ${({ theme }) => theme.fonts.poppins};
     margin: 10px;
-    color: ${({ theme }) => theme.colors.greyDarken4};
-    background-color: ${({ theme }) => theme.colors.lightBlueLighten4};
+    color: ${({ theme }) => theme.colors.lighten};
+    background-color: ${({ theme }) => theme.colors.darkenAccent};
     padding: 1rem;
     border-radius: ${({ theme }) => theme.radius.lrg};
-    box-shadow: ${({ theme }) => theme.shadow.depth1};
     max-width: 800px;
 `;
 
@@ -27,11 +27,11 @@ const TwitterImage = styled.img
     border-size: 1px;
 `;
 
-const TwitterUsername = styled(Text)
+const TwitterUsername = styled.p
 `
 font-family: ${({ theme }) => theme.fonts.poppins};
 font-size: 14px;
-  color: ${({ theme }) => theme.colors.greyDarken4};
+  color: ${({ theme }) => theme.colors.lighten};
   font-weight: 600;
   margin-bottom: 6px;
 
@@ -40,10 +40,11 @@ font-size: 14px;
   }
 `;
 
-const TweetDescription = styled(Text)
+const TweetDescription = styled.p
 `
     font-size: 1.1rem;
     line-height: 1.35;
+    text-shadow: none !important;
 `;
 
 const TweetUrl = styled(Link)

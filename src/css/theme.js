@@ -25,9 +25,10 @@ export default {
     alphaWhite90: 'rgba(255, 255, 255, .9)',
     alphaPurple90: 'rgba(198, 83, 255, .9)',
     black: '#000000',
-    darken: "#353239",
-    lighten: "#FAFAFA",
-    accent: "#97CAFF",
+    darken: "#2A2C2D",
+    darkenAccent: '#28292A',
+    lighten: "#BBB7B1",
+    accent: "#134373",
     white: '#FFFFFF',
     messages: {
       notice: '#FFAB00',

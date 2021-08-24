@@ -19,7 +19,7 @@ body {
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: #131313;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -60,6 +60,10 @@ body {
     font-weight: 400;
     font-size: 1.3em;
     margin-top: 10px;
+  }
+
+  .sidebar-nav li div {
+    color: #BBB7B1;
   }
   
   .sidebar-nav li a {

@@ -9,12 +9,12 @@ const Skill = styled.li
 
     li > i 
     {
-      color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.lighten};
     }
 
     i > p
     {
-      color: ${({ theme }) => theme.colors.greyDarken4};
+      color: ${({ theme }) => theme.colors.lighten};
       font-size: 1rem;
       font-weight: 800;
       font-family: 'Poppins';
@@ -25,6 +25,7 @@ const Skill = styled.li
 const SkillsContainer = styled.ul
 `
   font-size: 24px;
+  color: ${({ theme }) => theme.colors.lighten};
 `;
 
 
@@ -37,7 +38,7 @@ function Skills(props) {
 
       var skills = sharedSkills.icons.map((skills, i) => 
       {
-        var color = theme.colors.darken;
+        var color = theme.colors.lighten;
 
         return (
           <Skill className="list-inline-item mx-3" key={i}>
@@ -63,7 +64,7 @@ function Skills(props) {
         <div className="col-md-12">
           <div className="col-md-12">
             <Styled.SectionTitle className="section-title">
-              <span className="text-black">
+              <span>
                 {sectionName}
               </span>
             </Styled.SectionTitle>

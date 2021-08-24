@@ -43,6 +43,7 @@ textarea:focus, input:focus
 .header-icon {
 	height: 150px;
 	width: 150px;
+	color: #BBB7B1;
 }
 
 header {
@@ -105,6 +106,11 @@ header h1 {
 	width: 100%;
 }
 
+.dark-accent
+{
+	background-color: #28292A !important;
+}
+
 .slider-image {
 	border: 5px solid #D7CAAA;
 }
@@ -130,7 +136,7 @@ header h1 {
 }
 
 .foto div {
-	background: #ffffff;
+	background: #2A2C2D;
 	display: inline-block;
 	margin: 0 auto 5% auto;
 	padding: 10px 10px 5px;
@@ -179,7 +185,7 @@ header h1 {
 }
 
 .polaroid span {
-	background: #ffffff;
+	background: #2A2C2D;
 	display: inline-block;
 	margin: 55px 75px 30px;
 	padding: 15px 15px 30px;
@@ -252,6 +258,11 @@ header h1 {
 .vertical-timeline-element-date {
 	padding: 0 !important;
 	margin: 0 !important;
+}
+
+.vertical-timeline-element-content 
+{
+	background-color: #2A2C2D !important;
 }
 
 @media only screen and (max-width: 1170px) {

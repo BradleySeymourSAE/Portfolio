@@ -17,7 +17,7 @@ const WorkTitle = styled.div`
   text-align: left;
   font-size: 2em;
   font-weight: ${({ theme }) => theme.fonts.weights.bolder};
-  color: ${({ theme }) => theme.colors.greyDarken4};
+  color: ${({ theme }) => theme.colors.lighten};
   margin-bottom: 3px;
 `;
 
@@ -25,7 +25,7 @@ const CompanyTitle = styled.div`
   text-align: left;
   font-size: 1.4em;
   font-weight: ${({ theme }) => theme.fonts.weights.normal};
-  color: ${({ theme }) => theme.colors.greyDarken3};
+  color: ${({ theme }) => theme.colors.lighten};
   font-family: ${({ theme }) => theme.fonts.poppins};
   margin-bottom: 10px;
 `;
@@ -36,7 +36,7 @@ const TechnologyBadgeContainer = styled.div`
 
 const TechnologyBadge = styled(Badge)`
    background-color: ${({ theme }) => theme.colors.accent};
-   color: ${({ theme }) => theme.colors.darken};   
+   color: ${({ theme }) => theme.colors.lighten};   
    margin: 3px;
 `;
 
@@ -120,7 +120,7 @@ function Experience(props)
         <div className="col-md-12 mx-auto">
           <div className="col-md-12">
             <Styled.SectionTitle className="section-title">
-              <span className="text-black" style={{ textAlign: "center" }}>
+              <span style={{ textAlign: "center" }}>
                 {sectionName}
               </span>
             </Styled.SectionTitle>
@@ -130,12 +130,13 @@ function Experience(props)
             <!-- Vertical Timeline Begins Here -->
         */}
         <div className="col-md-8 mx-auto" style={{ marginBottom: "30px" }}>
-          <VerticalTimeline>
+          <VerticalTimeline className="dark-accent">
             {work}
             <VerticalTimelineElement
+              style={{ backgroundColor: "#2A2C2D" }}
               iconStyle={{
                 background: "#1F1F1F",
-                color: "#fff",
+                color: "#2A2C2D",
                 textAlign: "center"
               }}
               icon={

@@ -53,7 +53,7 @@ function RecentTweets(props)
                 <div className="col-md-12">
                     <div className="col-md-12">
                         <Styled.SectionTitle className="section-title">
-                            <span className="text-black">
+                            <span>
                                 {sectionTitle}
                             </span>
                         </Styled.SectionTitle>

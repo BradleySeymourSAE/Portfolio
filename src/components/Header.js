@@ -9,7 +9,7 @@ const DeveloperName = styled.h1
   font-family: 'Poppins';
   font-size: 3em;
   font-weight: 900;
-  color: ${({ theme }) => theme.colors.greyDarken5};
+  color: ${({ theme }) => theme.colors.lighten};
 `;
 
 const DeveloperRoleContainer = styled.div`
@@ -21,7 +21,7 @@ const DeveloperRoles = styled(Typical)
     font-family: 'Poppins';
     font-weight: 800;
     font-size: 2em;
-    color: ${({ theme }) => theme.colors.greyDarken3};
+    color: ${({ theme }) => theme.colors.lighten};
 `;
 
 function Header(props)

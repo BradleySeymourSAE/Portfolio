@@ -9,28 +9,19 @@ const SectionHeader = styled.header
 
 const SectionLayout = styled.section
 `
-    background-color: ${({ theme }) => theme.colors.lighten};
+    background-color: ${({ theme }) => theme.colors.darken};
     color: ${({ theme }) => theme.colors.darken};
 `;
 
 
 const SectionTitle = styled.h2
 `
-  color: ${(p) => (p.color ? p.color : 900)};
+  color: ${({ theme }) => theme.colors.lighten};
   font-weight: ${({ theme }) => theme.fonts.bold};
   font-size: 2.4rem;
   margin-bottom: 30px;
 `;
-/*
- style={{
-                        fontFamily: "Poppins",
-                        height: "auto",
-                        fontSize: "1.6em",
-                        lineHeight: "200%",
-                        padding: "2rem"
-                      }}
 
-*/
 const SectionContent = styled.div
 `
     font-family: 'Poppins', sans-serif;
@@ -38,6 +29,8 @@ const SectionContent = styled.div
     font-size: 1.35em;
     line-height: 200%;
     padding: 2rem;
+    background-color: ${({ theme }) => theme.colors.darkenAccent};
+    color: ${({ theme }) => theme.colors.lighten};
 `;
 
 const SectionFooter = styled.footer
