@@ -42,7 +42,7 @@ function Header(props)
   return (
     <Styled.SectionHeader id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
       <div style={{height: '100%'}}>
-        <div className="col s12">
+        <div className="col-md-12">
           <div>
             <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
             <br/>

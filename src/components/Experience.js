@@ -9,12 +9,13 @@ import cSharpIcon from '@iconify/icons-logos/c-sharp';
 import javascriptIcon from '@iconify/icons-logos/javascript';
 import styled from 'styled-components/macro';
 import * as Styled from './styled';
+import Badge from "react-bootstrap/Badge";
 
 
 
 const WorkTitle = styled.div`
   text-align: left;
-  font-size: 1.15em;
+  font-size: 2em;
   font-weight: ${({ theme }) => theme.fonts.weights.bolder};
   color: ${({ theme }) => theme.colors.greyDarken4};
   margin-bottom: 3px;
@@ -22,7 +23,7 @@ const WorkTitle = styled.div`
 
 const CompanyTitle = styled.div`
   text-align: left;
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: ${({ theme }) => theme.fonts.weights.normal};
   color: ${({ theme }) => theme.colors.greyDarken3};
   font-family: ${({ theme }) => theme.fonts.poppins};
@@ -33,12 +34,10 @@ const TechnologyBadgeContainer = styled.div`
     margin-bottom: 8px;
 `;
 
-const TechnologyBadge = styled.span`
-    background-color: ${(props) => props.bg};
-    color: ${(props) => props.color};
-    font-weight: ${(props) => props.weight};
-    font-family: ${(props) => props.font};
-    margin: 3px;
+const TechnologyBadge = styled(Badge)`
+   background-color: ${({ theme }) => theme.colors.accent};
+   color: ${({ theme }) => theme.colors.darken};   
+   margin: 3px;
 `;
 
 
@@ -60,12 +59,9 @@ function Experience(props)
 
         var l_MainTechnologyBadges = mainTechnologies.map((technology, i) => {
           return (
-            <TechnologyBadge 
-              bg={({ theme }) => `${theme.colors.blueLighten4}`}
-              color={({ theme }) => `${theme.colors.greyDarken4}`}
-              font={({ theme }) => `${theme.fonts.poppins}`}
-              weight={({ theme }) => `${theme.fonts.bold}`}
-              className="main-badge col"
+            <TechnologyBadge
+              pill
+              className="main-badge mr-2 mb-2"
               key={i}>
               {technology}
             </TechnologyBadge>
@@ -74,11 +70,8 @@ function Experience(props)
         var l_TechnologyBadges = technologies.map((technology, i) => {
           return (
             <TechnologyBadge 
-                bg={({ theme }) => `${theme.colors.blueLighten4}`}
-                color={({ theme }) => `${theme.colors.greyDarken4}`}
-                font={({ theme }) => `${theme.fonts.poppins}`}
-                weight={({ theme }) => `${theme.fonts.bold}`}
-                className="experience-badge col" 
+                pill
+                className="experience-badge mr-2 mb-2" 
                 key={i}
               >
               {technology}
@@ -98,7 +91,7 @@ function Experience(props)
             icon={<Icon icon={cSharpIcon} style={{ paddingRight: "1.5px" }} />}
             key={i}
           >
-            <TechnologyBadgeContainer className="row">
+            <TechnologyBadgeContainer style={{ textAlign: "left" }}>
               {l_MainTechnologyBadges}
             </TechnologyBadgeContainer>
 
@@ -114,7 +107,7 @@ function Experience(props)
             >
               {work.company}
             </CompanyTitle>
-            <TechnologyBadgeContainer className="row">
+            <TechnologyBadgeContainer>
               {l_TechnologyBadges}
             </TechnologyBadgeContainer>
           </VerticalTimelineElement>
@@ -123,17 +116,20 @@ function Experience(props)
     }
 
     return (
-      <Styled.SectionLayout id="resume" bg={({ theme }) => `${theme.colors.darkAccent}`}>
-        <div className="col s12">
-          <div className="col s12">
-            <Styled.SectionTitle className="center">
+      <Styled.SectionLayout id="resume" className="pb-5">
+        <div className="col-md-12 mx-auto">
+          <div className="col-md-12">
+            <Styled.SectionTitle className="section-title">
               <span className="text-black" style={{ textAlign: "center" }}>
                 {sectionName}
               </span>
             </Styled.SectionTitle>
           </div>
         </div>
-        <div className="col s12 m8" style={{ marginBottom: "30px" }}>
+        {/*
+            <!-- Vertical Timeline Begins Here -->
+        */}
+        <div className="col-md-8 mx-auto" style={{ marginBottom: "30px" }}>
           <VerticalTimeline>
             {work}
             <VerticalTimelineElement

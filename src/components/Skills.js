@@ -24,7 +24,6 @@ const Skill = styled.li
 
 const SkillsContainer = styled.ul
 `
-
   font-size: 24px;
 `;
 
@@ -41,10 +40,10 @@ function Skills(props) {
         var color = theme.colors.darken;
 
         return (
-          <Skill className="col" key={i}>
+          <Skill className="list-inline-item mx-3" key={i}>
             <span>
               <div className="text-center skills-tile">
-                <i className={skills.class} style={{ fontSize: "125%", color: color }}>
+                <i className={skills.class} style={{ fontSize: "150%", color: color }}>
                   <p
                     className="text-center"
                     style={{ fontSize: "30%", marginTop: "6px" }}
@@ -61,15 +60,15 @@ function Skills(props) {
 
     return (
       <Styled.SectionLayout id="skills" style={{ paddingBottom: '5%' }}>
-        <div className="col s12">
-          <div className="col s12">
-            <Styled.SectionTitle className="center">
+        <div className="col-md-12">
+          <div className="col-md-12">
+            <Styled.SectionTitle className="section-title">
               <span className="text-black">
                 {sectionName}
               </span>
             </Styled.SectionTitle>
           </div>
-          <div className="row center">
+          <div className="col-md-12 text-center">
             <SkillsContainer className="list-inline mx-auto skill-icon">
               {skills}
             </SkillsContainer>

@@ -49,19 +49,19 @@ function RecentTweets(props)
         var sectionTitle = "Live Twitter Feed";
 
         return (
-            <Styled.SectionLayout id="twitter" className="center">
-                <div class="col s12">
-                    <div class="col s12">
-                <Styled.SectionTitle class="center">
-                    <span className="text-black">
-                        {sectionTitle}
-                    </span>
-                </Styled.SectionTitle>
-                <TwitterFieldsContainer className="col s8">
-                    <Tweets user={user} timeline={tweets} />
-                </TwitterFieldsContainer>
-                </div>
-             </div>
+            <Styled.SectionLayout id="twitter">
+                <div className="col-md-12">
+                    <div className="col-md-12">
+                        <Styled.SectionTitle className="section-title">
+                            <span className="text-black">
+                                {sectionTitle}
+                            </span>
+                        </Styled.SectionTitle>
+                        <TwitterFieldsContainer className="col-md-5 s8 mx-auto">
+                            <Tweets user={user} timeline={tweets} />
+                        </TwitterFieldsContainer>
+                    </div>
+                 </div>
             </Styled.SectionLayout>
     );
 }

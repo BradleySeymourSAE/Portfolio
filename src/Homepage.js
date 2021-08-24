@@ -13,7 +13,7 @@ import styled from 'styled-components/macro';
 
 const HomepageLayout = styled.div
 `
-  background-color: ${(p) => p.color};
+  background-color: ${(p) => p.bg};
 `;
 
 
@@ -65,9 +65,7 @@ class Homepage extends Component {
 
   render() {
     return (
-      <HomepageLayout
-        color={({ theme }) => `${theme.colors.lightContrast}`}
-      >
+      <HomepageLayout bg={({ theme }) => `${theme.colors.accent}`}>
         <Header sharedData={this.state.sharedData.basic_info} />
         <About
           className="container"
