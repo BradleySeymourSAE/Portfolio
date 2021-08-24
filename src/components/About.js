@@ -26,9 +26,9 @@ function About(props){
 
     return (
       <Styled.SectionLayout id="about">
-        <div className="col s12">
+        <div className="col-md-12">
           <Styled.SectionTitle 
-              className="center" color={({ theme }) => `${theme.colors.greyDarken4}`} 
+              className="section-title"
               weight={`${({ theme }) => theme.fonts.weights.bolder}`}
             >
             <span>
@@ -36,34 +36,32 @@ function About(props){
             </span>
           </Styled.SectionTitle>
 
-            <div className="col s12">
-              <div className="row center">
+            <div className="row center mx-auto mb-5">
+              <div className="col-md-6 mb-8 center">
 
                 {/* <!-- Avatar Image Placeholder --> */}
-                <div className="col m6 pull-m1 center">
-                  <div className="col m6 center">
+                <div className="polaroid">
+                  <span style={{ cursor: "auto" }}>
                     <img
-                      className="responsive-img"
-                      height="150px"
+                      height="195"
                       src={profilepic}
                       alt="Avatar placeholder"
                     />
-                  </div>
+                  </span>
                 </div>
 
                 {/* <!-- Card Text Box  --> */}
-                <div className="col m6 pull-m1 center">
-                  <div className="col s12">
-                    <div className="card col s12" style={{ marginTop: "1rem", paddingTop: '10px' }}>
-              
+                <div className="col-md-10 center">
+                  <div className="col-md-12">
+                    <div className="card">
                     <Styled.SectionContent
-                      className="card-content valign-wrapper"
+                      className="card-body text-justify ml-4 mr-3"
                       style={{
                         fontFamily: "Poppins",
                         height: "auto",
-                        fontSize: "1em",
-                        lineHeight: "150%",
-                        padding: "1rem 1.48rem"
+                        fontSize: "1.6em",
+                        lineHeight: "200%",
+                        padding: "2rem"
                       }}
                      >
                       {about}
