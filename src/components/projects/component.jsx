@@ -11,7 +11,7 @@ const StyledProject = styled.div
 
 const StyledProjectTitle = styled.p
 `
-  color: ${({ theme }) => theme.colors.greyDarken4};
+  color: ${({ theme }) => theme.colors.lighten};
   font-size: 1.3em;
   font-weight: 900;
   margin: 5px;
@@ -23,7 +23,7 @@ const StyledProjectDate = styled.span
 `
   margin-top: 5%;
   letter-spacing: 2px;
-  color: ${({ theme }) => theme.colors.darkContrast};
+  color: ${({ theme }) => theme.colors.lighten};
   background-color: ${({ theme }) => theme.colors.accentContrast};
 `;
 
