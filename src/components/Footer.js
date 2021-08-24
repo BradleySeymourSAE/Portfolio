@@ -56,7 +56,7 @@ function Footer(props)
   }
 
   return (
-    <Styled.SectionFooter>
+    <Styled.SectionFooter id="footer">
       <div className="row">
         <SocialLinks className="social-links center">
           {networks}
