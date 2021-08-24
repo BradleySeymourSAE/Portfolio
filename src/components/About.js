@@ -36,8 +36,8 @@ function About(props){
             </span>
           </Styled.SectionTitle>
 
-            <div className="row center mx-auto mb-5">
-              <div className="col-md-6 mb-8 center">
+            <div className="row center mx-auto">
+              <div className="col-md-6 center">
 
                 {/* <!-- Avatar Image Placeholder --> */}
                 <div className="polaroid">
@@ -51,26 +51,16 @@ function About(props){
                 </div>
 
                 {/* <!-- Card Text Box  --> */}
-                <div className="col-md-10 center">
-                  <div className="col-md-12">
-                    <div className="card">
+                <div className="col-md-12">
+                    <div className="card card-responsive">
                     <Styled.SectionContent
-                      className="card-body text-justify ml-4 mr-3"
-                      style={{
-                        fontFamily: "Poppins",
-                        height: "auto",
-                        fontSize: "1.6em",
-                        lineHeight: "200%",
-                        padding: "2rem"
-                      }}
+                      className="card-body text-start ml-6 mr-3"
                      >
                       {about}
                     </Styled.SectionContent>
                     </div>
                   </div>
-                </div>
-
-              </div>
+               </div>
             </div>
         </div>
       </Styled.SectionLayout>
