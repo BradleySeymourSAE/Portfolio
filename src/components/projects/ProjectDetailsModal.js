@@ -6,7 +6,7 @@ import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 import unityIcon from '@iconify/icons-logos/unity';
 import cSharpIcon from '@iconify/icons-logos/c-sharp';
 import { Icon } from '@iconify/react';
-import { Modal } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
 
 
@@ -135,7 +135,14 @@ function ProjectDetailsModal(props)
                 </a>
               ) : null}
             </h3>
-            <p className="modal-description">{description}</p>
+            <p className="modal-description">
+              {description}
+            </p>
+            <Modal.Footer className="d-flex justify-content-start">
+              <Button variant="primary" size="lg">
+                Read Post Mortem
+              </Button>
+            </Modal.Footer>
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">
                 {tech}

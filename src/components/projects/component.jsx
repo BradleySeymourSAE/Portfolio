@@ -35,6 +35,7 @@ function Projects(props) {
     const {
         resumeProjects,
         resumeBasicInfo,
+        gameAssets
     } = props;
 
     const detailsModalShow = (data) => setState({ detailsModalShow: true, deps: data });
