@@ -12,7 +12,7 @@
     "projects": [
       {
         "title": "Lucid Alpine Experience",
-        "startDate": "2021",
+        "startDate": "2021 T2",
         "description": "A lucid dream inspired game created from a personal perspective.",
         "images": [
           "images/portfolio/alpine/alpine1.png",
@@ -32,7 +32,7 @@
       },
       {
         "title": "Field of Fire",
-        "startDate": "2021",
+        "startDate": "2021 T1",
         "description": "The Field of Fire (Tanky Tanks) project that I had created during my first trimester at SAE Institute. Project was heavily inspired by Sebastian Lague and VGHS. ",
         "images": [
           "images/portfolio/field-of-fire/field1.png",
@@ -52,13 +52,33 @@
       },
       {
         "title": "Prison Break",
-        "startDate": "2021",
+        "startDate": "2021 T2",
         "description": "Shippable Assets Project that I created while studying at SAE Institute. I developed the assets and the logic for the application and I enjoyed working with lighting, post processing and shaders in this!",
         "images": [
           "images/portfolio/prison/prison1.png",
           "images/portfolio/prison/prison2.png"
         ],
         "url": "https://bradleyseymoursae.itch.io/prison-break",
+        "technologies": [
+            {
+              "class": "devicon-unity-plain",
+              "name": "Unity"
+            },
+            {
+              "class": "devicon-csharp-plain",
+              "name": "C#"
+            }
+        ]
+      },
+      {
+        "title": "Omari's Crypt",
+        "startDate": "2021 T2",
+        "description": "Omari's Crypt is a first person exploration and horror survival game that myself and two talented individuals had created in just under four weeks!",
+        "images": [
+          "images/portfolio/egypt/egypt1.jpg",
+          "images/portfolio/egypt/egypt2.png"
+        ],
+        "url": "https://mevanssae.itch.io/omaris-crypt",
         "technologies": [
             {
               "class": "devicon-unity-plain",

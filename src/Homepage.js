@@ -26,12 +26,14 @@ class Homepage extends Component {
       foo: "bar",
       resumeData: {},
       sharedData: {},
+      assetData: {}
     };
   }
 
   componentDidMount() {
     this.loadSharedData();
     this.loadResumeFromPath();
+    this.loadAssetsData();
   }
 
   loadResumeFromPath() {
@@ -64,6 +66,24 @@ class Homepage extends Component {
     });
   }
 
+  loadAssetsData()
+  {
+    $.ajax({
+      url: `project_assets_data.json`,
+      dataType: "json",
+      cache: false,
+      success: function (data)
+      {
+        this.setState({ assetData: data });
+      }
+      .bind(this),
+      error: function (xhr, status, err)
+      {
+        alert(err);
+      },
+    });
+  }
+
   render() {
     return (
       <HomepageLayout bg={({ theme }) => `${theme.colors.accent}`} id="wrapper" className="toggled">
@@ -79,6 +99,7 @@ class Homepage extends Component {
           className="container-fluid"
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
+          gameAssets={this.state.assetData.assets}
         />
         <Skills
           className="container-fluid"

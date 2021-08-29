@@ -1,0 +1,24 @@
+{
+    "assets": {
+        "alpine":[
+            { 
+                "name": "alpine-village-house", 
+                "images": ["images/assets/alpine/house/alpinehouse1","images/assets/alpine/house/alpinehouse2","images/assets/alpine/house/alpinehouse3"], 
+                "description":"The alpine village house model was created in blender for the lucid alpine experience project I created in trimester 2!",
+                "url": "" 
+            },
+            { 
+                "name": "low-poly-alpine-tree", 
+                "images": ["images/assets/alpine/tree/tree1","images/assets/alpine/tree/tree2","images/assets/alpine/tree/tree3"], 
+                "description":"The low poly alpine tree variants with and without snow!",
+                "url": "" 
+            },
+            { 
+                "name": "low-poly-alpine-rock", 
+                "images": ["images/assets/alpine/rock/rock1","images/assets/alpine/rock/rock2","images/assets/alpine/rock/rock3"], 
+                "description":"The low poly rocks created for the lucid alpine experience project, both standard and snow covered!",
+                "url": "" 
+            }
+        ]
+    }
+}

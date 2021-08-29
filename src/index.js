@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 import './index.scss';
 import './App.scss';
 import Homepage from 'Homepage';
@@ -18,11 +19,35 @@ import 'base.css';
  window.$secondaryLanguage = 'en';
  window.$secondaryLanguageIconId = 'secondary-lang-icon';
 
+
+ const Child = () => 
+ {
+   let title = useParams();
+
+   console.log(title);
+
+   return (
+     <div>
+       <h1 children={title} />
+     </div>
+   )
+ };
+
+
 ReactDOM.render(
   <Providers apollo theme>
-    <Homepage />
+    <Router>
+      <Switch>
+       <Route path="/">
+         <Homepage />
+        </Route>
+      </Switch>
+      </Router>
   </Providers>,
   document.getElementById('application'),
 );
+
+
+
 
 serviceWorker.register();
